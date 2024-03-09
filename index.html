@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function</title>
+    <style>
+        #login {
+            text-align: left;
+            margin-left: 30%;
+            margin-top: 13%;
+            position: relative;
+            border-width: 5px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <p>Enter your credentials</p>
+        <input type="text" placeholder="Full Name" id="username"><br>
+        <input type="number" placeholder="Age" id="userage"><br>
+        <p>Strand</p>
+        <input type="text" placeholder="Ex: ICT" id="strand">
+
+        <br><br>
+        <input type="submit" onclick="login();" />
+        <br><br>
+        <p id="success"></p>
+    </div>
+
+    <script>
+        function login() {
+            var one = document.getElementById("username").value;
+            var two = document.getElementById("userage").value;
+            var three = document.getElementById("strand").value;
+
+            var welcomeMessage = "Welcome! " + one + " (Age: " + two + ", Strand: " + three + ")";
+            document.getElementById("success").textContent = welcomeMessage;
+        }
+    </script>
+</body>
+</html>
